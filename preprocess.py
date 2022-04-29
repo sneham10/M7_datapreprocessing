@@ -10,10 +10,12 @@ df['Ship Date']=pd.to_datetime(df['Ship Date'])
 print(df.duplicated())
 #removing country 
 del df['Country']
-del df['Total Revenue']
+
 del df['Unit Price']
 df['Order Date'] = pd.to_datetime(df['Order Date'])
 df['year'] = df['Order Date'].dt.year
 print(df)
 #saving in another file
 df.to_csv('cleaned1.csv')
+
+
