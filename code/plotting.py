@@ -12,7 +12,6 @@ plt.subplot(1,2,1)
 plt.plot(x,color='r')
 plt.title("Unit Sold")
 
-
 plt.subplot(1,2,2)
 plt.plot(y,color='b')
 #title for plot
@@ -33,4 +32,21 @@ plt.suptitle("order priority")
 plt.hist(b)
 plt.legend()
 plt.show()
+
+a= df1['Item Type']
+plt.suptitle("Overall item count")
+item_count = Counter(a)
+b=item_count.values()
+c=item_count.keys()
+plt.bar(c,b)
+plt.show()
+
+a=df1['year']
+count=Counter(a)
+b=count.values()
+plt.suptitle("pie chart for years")
+tes_lables=[2010,2011,2012,2013,2014,2015,2016,2017]
+plt.pie(b,labels=tes_lables)
+plt.show()
+plt.legend(title="year statistics")
 
